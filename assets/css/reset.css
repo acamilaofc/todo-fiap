@@ -1,7 +1,7 @@
 :root {
   --menuWidth: 200px;
   --detailWidth: 300px;
-  --border: solid 10px;
+  --border: solid 1px;
   --containerWidth: calc(100vw - (var(--menuWidth) + var(--detailWidth)));
 }
 
