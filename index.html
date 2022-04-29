@@ -4,18 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Viewport usado para reconhecer se é um browser mobile -->
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
     <title>Avanade - Projeto HTML5, CSS3, JS</title>
-    <style>
-      h1,
-      h2 {
-        font-weight: 300;
-      }
-    </style>
   </head>
   <body>
-    <div style="font-family: Arial, Helvetica, sans-serif; font-size: 2em">
-      <h1>Hello World, never say VAI CORINTHIANS!</h1>
-      <h2>Nunca torcerei</h2>
+    <div class="card" style="align-items: center">
+      <h1 class="card-title">Hello World, never say VAI CORINTHIANS!</h1>
+      <div class="card-body" style="align-items: center">
+        <button type="button" class="btn btn-danger btn-sm">Torcerei</button>
+        <button type="button" class="btn btn-success btn-lg">
+          Nunca torcerei
+        </button>
+      </div>
     </div>
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

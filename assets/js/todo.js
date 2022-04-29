@@ -1,3 +1,8 @@
+import { addTask, getAllTasks } from "./utils/domFuncions.js";
+
+// console.log(db[0].steps[2].step);
+// output: "Publicar no Expo"
+
 const db = [
   {
     id: 1,
@@ -29,6 +34,7 @@ const db = [
   },
 ];
 
+getAllTasks(db);
 // console.log(db[0].title);
 
 const newTask = document.querySelector("#inputTxtNewTask");
@@ -37,15 +43,25 @@ form.addEventListener("submit", (e) => {
   e.preventDefault();
 });
 
+const d = new Date();
+const today = `${d.getDay()}/${d.getMonth() + 1}/${d.getFullYear()}`;
+
 newTask.addEventListener("keyup", (e) => {
   e.preventDefault();
   e.stopPropagation();
   if (e.key == "Enter") {
-    alert(newTask.value);
-    db.push({ id: Number(db.length) + 1, title: newTask.value });
-    newTask.value = "";
-    console.log(db);
+    if (!newTask.value) {
+      alert("Digite alguma coisa");
+    } else {
+      alert(newTask.value);
+      db.push({
+        id: Number(db.length) + 1,
+        title: newTask.value,
+        done: false,
+        dueDate: today,
+      });
+      newTask.value = "";
+      console.log(db);
+    }
   }
 });
-{
-}
