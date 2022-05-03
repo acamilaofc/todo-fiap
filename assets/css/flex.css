@@ -1,0 +1,100 @@
+@keyframes fadeUp {
+  from {
+    transform: translateY(100px) scale(0.5) rotate(360deg);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.box {
+  animation: fadeUp 3s;
+  animation-iteration-count: 1;
+  width: 50%;
+  height: 50vh;
+  border: solid 5px red;
+  margin: 10% auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.item {
+  width: 45px;
+  height: 45px;
+  background: #eee;
+  margin: 1%;
+  font-size: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: 1s;
+}
+
+.a {
+  color: red;
+}
+
+.b {
+  color: green;
+}
+
+.c {
+  color: blue;
+}
+
+/* Transform -- Muda a forma, mas não mostra mudando */
+/* Transition -- Não muda nada, mas mostra a transformaçãop */
+.item:hover {
+  background: #faa;
+  transform: translateY(-10px) scale(1.5);
+}
+
+.picture {
+  width: 400px;
+  height: 300px;
+  margin: 0 auto;
+  overflow: hidden;
+  margin-bottom: 10%;
+  position: relative;
+}
+
+.picture > figure {
+  height: 300px;
+  position: relative;
+}
+
+.picture > figure > figcaption {
+  width: 100%;
+  background: #333;
+  color: white;
+  position: absolute;
+  bottom: -100px;
+  text-align: center;
+  transition-duration: 0.5s;
+}
+
+.picture > figure > img {
+  width: 100%;
+}
+
+.picture:hover > figure > figcaption {
+  bottom: 0;
+}
+
+/*
+Unidades de medida
+px - medida fixa
+em - 1em equivale 100% da medida definida no pai
+rem - root em (html {})
+% - relação ao elemento pai
+*/
+
+/* 
+Animação
+@keyframes
+from - to
+*/

@@ -138,9 +138,12 @@ header.menu__header__profile > div {
 }
 
 /* Task */
+.tasks {
+  flex-direction: column;
+}
 
 .task {
-  width: 100%;
+  width: 90%;
   height: 60px;
   margin: 2% 5%;
   flex-direction: row;
